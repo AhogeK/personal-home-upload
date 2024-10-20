@@ -1,6 +1,6 @@
 package com.ahogek.resource;
 
-import com.ahogek.repository.FilesRepository;
+import com.ahogek.repository.FileSystemRepository;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.GET;
@@ -17,18 +17,18 @@ import jakarta.ws.rs.core.MediaType;
 @Path("/files")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
-public class FilesResource {
+public class FileSystemResource {
 
-    private final FilesRepository filesRepository;
+    private final FileSystemRepository fileSystemRepository;
 
     @Inject
-    public FilesResource(FilesRepository filesRepository) {
-        this.filesRepository = filesRepository;
+    public FileSystemResource(FileSystemRepository fileSystemRepository) {
+        this.fileSystemRepository = fileSystemRepository;
     }
 
     @GET
     @Path("/test")
     public long count() {
-        return filesRepository.count();
+        return fileSystemRepository.count();
     }
 }

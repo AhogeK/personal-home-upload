@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
  * @since 2024-10-20 04:25:44
  */
 @QuarkusTest
-class FilesResourceTest {
+class FileSystemResourceTest {
 
     @Test
     void testFilesDataOpIsOk() {
